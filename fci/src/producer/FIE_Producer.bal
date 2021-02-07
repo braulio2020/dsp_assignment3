@@ -45,44 +45,6 @@ service graphql:Service /graphql on new graphql:Listener(8080){
         return "fie accepted " ;
     }
 
-    // resource function get assignFIE(string Applicant_ID,string FIEID)  returns string {
-
-    //     //Application form object
-    //      supForm form = {"message" :"application accepted attached id the interview time","studentNo":Applicant_ID,"FIEID":FIEID};
-    //      //change file status using the filename as key 
-    //      string jsonFilePath = "./files/" +Applicant_ID+".json";
-       
-    //        //read file
-    //      json readJson = checkpanic io:fileReadJson(jsonFilePath);
-    //      //make record a file
-    //       map<json> application = <map<json>>readJson;
-    //       //check if assignment was approved by supervisor
-    //         if ( application["app_status"] == "supervisor accepted"){
-    //                     //assign FIE_ID
-    //                     application["FIE_Assigned"] = FIEID;
-    //                     //write updated file to json
-    //                     checkpanic io:fileWriteJson(jsonFilePath, application);
-
-                                
-    //                         byte[] serialisedMsg = form.toString().toBytes();
-
-    //                     //call producer to send messages to a topic "candidateReg" 
-    //                             checkpanic prod->sendProducerRecord({
-    //                                                     topic: "student_proposal",
-    //                                                     value: serialisedMsg });
-
-    //                             checkpanic prod->flushRecords();
-                        
-    //                 }else{
-
-    //                 }
-            
-        
-
-    //        // io:println();
-    //     return "application accepted " ;
-    // }
-
 }
 
 public type supForm record {
